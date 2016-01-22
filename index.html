@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="/js/bundle.js"></script>
+    </head>
+    <body>
+        <div id="sf_container">
+        </div>
+
+        <div id="sf_container2">
+        </div>
+
+        <script>
+            var simpleFormFactory = React.createFactory(SimpleForm);
+            var sf = simpleFormFactory({
+                email: 'daniel@g.com',
+                password: 'abcd'
+            });
+            ReactDOM.render(sf, document.getElementById('sf_container'));
+
+            var sf2 = simpleFormFactory({
+                email: '',
+                password: ''
+            });
+            ReactDOM.render(sf2, document.getElementById('sf_container2'));
+        </script>
+    </body>
+</html>
